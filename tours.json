@@ -1,0 +1,45 @@
+{
+"title": "Tours",
+"description": "Greece Tours",
+"tours": [
+	 {
+	 "name": "Greece classic",
+	 "days": "14",
+	 "price": "50000",
+	 "cities": ["Athens", 
+		    "Thessaloniki",
+		    "Meteora",
+		    "Delphi",
+		    "Corinth",
+		    "Sparta"
+		    ],
+	  "stars": ["3",
+		    "4"
+                   ],	
+	  "purpose": "excursions"	  
+	  },
+
+	  {
+	  "name": "Greece briefly",
+	  "days": "5",
+	  "price": "30000",
+	  "cities": ["Athens", 
+		     "Thessaloniki",
+		     "Meteora"
+		    ],
+	  "stars": "3",
+	  "purpose": "excursions"
+	  },
+			
+	  {
+	  "name": "Crete",
+	  "days": "7",
+	  "price": "40000",
+	  "cities": ["Heraklion"], 
+	  "stars": "4",
+	  "purpose": ["excursions",
+		      "sea"
+	             ]
+	  }
+	  ]
+}

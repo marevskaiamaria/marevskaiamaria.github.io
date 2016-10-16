@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="toursgr">
+<head>
+ <meta charset="utf-8">
+ <title>Туры в Грецию</title>
+ <link rel="stylesheet" href="style.css">
+ <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.7/angular.min.js"></script>
+ <script>
+		var toursgr = angular.module('toursgr', []);
+		toursgr.controller('tourscont', function ($scope, $http){
+		$http.get('tours.json').success(function(data) {
+		$scope.toursd = data;
+		});
+		});
+ </script>
+</head>
+<body ng-controller="tourscont">
+  <h2>Туры в Грецию</h2>
+<table class="table_tours">
+		<tr>
+			<th>Название тура</th>
+			<th>Количество дней</th>
+			<th>Цена</th>
+			<th>Посещаемые города</th>
+		</tr>
+		<tr ng-repeat="tours in toursd.tours | orderBy: 'price'">
+			<td>{{tours.name}}</td>
+			<td>{{tours.days}}</td>
+			<td>{{tours.price}}</td>
+			<td ><span ng-repeat="cities in toursd.tours[$index].cities">{{cities+" "}}</span></td>
+		</tr>
+		
+	</table>
+</body>
+</html>
